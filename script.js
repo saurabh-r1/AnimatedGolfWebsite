@@ -1,3 +1,20 @@
+var crsr=document.querySelector("#cursor");
+var blur=document.querySelector("#cursor-blur");
+var blurwhite=document.querySelector("#cursor-blur-white");
+
+document.addEventListener("mousemove", function(dets){
+    crsr.style.left=dets.x+"px"
+    crsr.style.top=dets.y+"px"
+
+    blur.style.left=dets.x-200+"px"
+    blur.style.top=dets.y-200+"px"
+
+    blurwhite.style.left=dets.x-100+"px"
+    blurwhite.style.top=dets.y-100+"px"
+
+})
+
+
 gsap.to("#nav", {
     backgroundColor: "#000",
     height:"110px",

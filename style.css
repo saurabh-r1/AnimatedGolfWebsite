@@ -10,6 +10,34 @@ html, body{
     width: 100%;
 }
 
+#cursor{
+    height: 22px;
+    width: 22px;
+    background-color: #d4fa6b;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #d4fa6b49;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;  
+}
+
+#cursor-blur-white{
+    height: 200px;
+    width: 200px;
+    background-color: #e1e6d63a;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;  
+}
+
 #nav{
     height: 145px;
     width: 100%;
@@ -68,10 +96,64 @@ video{
 
 }
 
+#page1 h2{
+    font-size: 22px;
+    font-weight: 800px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 #page1 p{ 
     font-size: 20px;
     font-weight: 400;
     width: 50%;
 }
 
+#page2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
 
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller h4{
+    display: inline-block;
+    font-size: 93px;
+    font-weight: 900px;
+    font-family: Arial, sans-serif;
+    margin-right: 10px;
+    color: #000;
+    -webkit-text-stroke: 1px #c1c4bb;
+}
+#scroller h4:hover{
+    color: #c1c4bb;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+
+    }
+}
