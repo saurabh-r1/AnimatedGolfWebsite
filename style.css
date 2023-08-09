@@ -13,7 +13,7 @@ html, body{
 #cursor{
     height: 22px;
     width: 22px;
-    background-color: #d4fa6b;
+    background-color: #81ad05;
     border-radius: 50%;
     position: fixed;
     z-index: 99;
@@ -21,7 +21,7 @@ html, body{
 #cursor-blur{
     height: 400px;
     width: 400px;
-    background-color: #d4fa6b49;
+    background-color: #81ad0549;
     border-radius: 50%;
     position: fixed;
     filter: blur(40px);
@@ -91,7 +91,7 @@ video{
     color:black;
     top: -6px;
     left: -6px;
-    -webkit-text-stroke: 1px #d4fa6b;
+    -webkit-text-stroke: 1px #81ad05;
     z-index: -1;
 
 }
@@ -120,6 +120,8 @@ video{
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    position: relative;
+    z-index: 10;
 }
 #scroller::-webkit-scrollbar{
     display: none;
@@ -143,9 +145,11 @@ video{
     margin-right: 10px;
     color: #000;
     -webkit-text-stroke: 1px #c1c4bb;
+    transition: all linear 0.4s;
 }
 #scroller h4:hover{
-    color: #c1c4bb;
+    color: #81ad05;
+    -webkit-text-stroke: 1px #81ad05;
 }
 
 @keyframes scroll{
@@ -156,4 +160,38 @@ video{
         transform: translateX(-100%);
 
     }
+}
+
+#about-us{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img{
+    height: 180px;
+    width: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+#about-us-in{
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3{
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+#about-us-in p{
+    font-size: 20px;
+    line-height: 20px;
+    
 }
